@@ -1,4 +1,2 @@
-# zero_waste
+#Zero Waste App 
 
-A new Flutter project.
-"# zerowasteApp" 
