@@ -2,8 +2,6 @@
 
 A modern Flutter application designed to help you cook delicious Indian meals using only the ingredients you already have, reducing food waste.
 
-![App Screenshot](https://i.imgur.com/b85efe.png)
-
 ---
 
 ## ✨ Key Features
@@ -45,3 +43,4 @@ To run this project locally, follow these steps:
     ```bash
     flutter run
     ```
+
