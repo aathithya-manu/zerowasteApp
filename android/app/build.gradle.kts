@@ -20,6 +20,7 @@ android {
     }
 
     defaultConfig {
+        ndkVersion = "27.0.12077973"
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.zero_waste"
         // You can update the following values to match your application needs.

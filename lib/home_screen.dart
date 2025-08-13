@@ -16,7 +16,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   // --- STATE ---
   // Default selection to show an initial recipe
-  final Set<String> _selectedIngredients = {"lentils", "onion", "tomato", "ginger", "garlic", "turmeric", "ghee", "cumin seeds"};
+  final Set<String> _selectedIngredients = {"egg", "onion", "tomato", "green chili"};
   late List<Recipe> _filteredRecipes;
 
   // --- UPDATED DATA: Indian Household Ingredients & Recipes ---
@@ -42,10 +42,10 @@ class _HomeScreenState extends State<HomeScreen> {
         ingredients: ["potato", "cumin seeds", "turmeric", "ghee", "cilantro"],
         instructions: "1. Heat ghee in a pan and add cumin seeds.\n2. When they splutter, add boiled and cubed potatoes.\n3. Add turmeric and salt. Sauté for a few minutes until potatoes are lightly browned.\n4. Garnish with fresh cilantro."),
     Recipe(
-        name: "Masala Omelette",
-        imageUrl: "https://images.unsplash.com/photo-1587339144362-818c6a05e5a5",
-        ingredients: ["egg", "onion", "tomato", "green chili", "cilantro", "turmeric"],
-        instructions: "1. Finely chop onion, tomato, green chili, and cilantro.\n2. Whisk eggs in a bowl and add the chopped vegetables and turmeric.\n3. Pour the mixture onto a hot, oiled pan.\n4. Cook until set, then fold and serve."),
+        name: "Masala Omelette🍳",
+        imageUrl: "https://cdn.pixabay.com/photo/2019/03/10/13/32/food-4046229_1280.jpg",
+        ingredients: ["egg", "onion", "tomato", "green chili"],
+        instructions: "1. Finely chop onion, tomato, green chili.\n2. Whisk eggs in a bowl and add the chopped vegetables.\n3. Pour the mixture onto a hot, oiled pan.\n4. Cook until set, then fold and serve."),
   ];
 
   @override
@@ -56,9 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _filterRecipes() {
     setState(() {
-      // --- CORRECTED & STRICT FILTERING LOGIC ---
-      // A recipe is shown only if EVERY ingredient required for it
-      // is present in the user's selection.
+      // A recipe is shown only if EVERY ingredient required for it is present in the user's selection.
       _filteredRecipes = _allRecipes.where((recipe) {
         return recipe.ingredients.every((requiredIngredient) => _selectedIngredients.contains(requiredIngredient));
       }).toList();
@@ -90,9 +88,9 @@ class _HomeScreenState extends State<HomeScreen> {
             centerTitle: false,
             title: Row(
               children: [
-                Icon(Icons.eco_rounded, color: Colors.white70),
-                SizedBox(width: 8),
-                Text('Zero-Waste Chef', style: TextStyle(fontWeight: FontWeight.w600)),
+                Icon(Icons.flatware_outlined, color: linearPrimary),
+                SizedBox(width: 6),
+                Text('zeroWaste Chef App', style: TextStyle(fontWeight: FontWeight.w900)),
               ],
             ),
           ),
@@ -102,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("What's in your fridge?", style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w600)),
+                  Text("Items that you have😁", style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w500)),
                   const SizedBox(height: 16),
                   Wrap(
                     spacing: 8.0,
@@ -118,13 +116,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           side: isSelected ? BorderSide.none : BorderSide(color: linearBorder),
                         ),
                         labelStyle: TextStyle(
-                          color: isSelected ? Colors.white : Colors.white70,
+                          color: isSelected ? Colors.black : Colors.white70,
                           fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
                         ),
+
                         pressElevation: 0,
                       );
                     }).toList(),
                   ),
+                  const SizedBox(height: 16),
+                  Text("Receipes you can make😊", style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w500))
                 ],
               ),
             ),

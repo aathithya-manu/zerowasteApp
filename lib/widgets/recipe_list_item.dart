@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import '../models/recipe_model.dart';
 import '../screens/recipe_detail_screen.dart'; // Import the new detail screen
-import '../main.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RecipeListItem extends StatelessWidget {
@@ -24,9 +23,9 @@ class RecipeListItem extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          color: linearGrey,
-          borderRadius: BorderRadius.circular(8),
-          border: Border.all(color: linearBorder, width: 1.5),
+          color: const Color.fromARGB(153, 158, 158, 158),
+          borderRadius: BorderRadius.circular(30),
+          border: Border.all(color: Colors.transparent, width: 1.5),
         ),
         child: Row(
           children: [

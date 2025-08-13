@@ -13,12 +13,12 @@ class EmptyState extends StatelessWidget {
           Icon(Icons.search_off_rounded, size: 48, color: Colors.grey[700]),
           const SizedBox(height: 16),
           const Text(
-            "No Recipes Found",
+            "No Receipes Found🤷‍♂️",
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.white),
           ),
           const SizedBox(height: 8),
           Text(
-            "Try removing an ingredient filter.",
+            "Try different combinations or add new items to your bucket😪",
             style: TextStyle(color: Colors.grey[500]),
             textAlign: TextAlign.center,
           ),

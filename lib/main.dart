@@ -1,11 +1,13 @@
+//v0.1.0 Chumma oru gemini vech
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'home_screen.dart';
 
 // --- Linear-Inspired Color Palette ---
-const Color linearBlack = Color(0xFF111113);
-const Color linearPrimary = Color(0xFF5E5CEE);
-const Color linearGrey = Color(0xFF1C1C1E);
+const Color linearBlack = Color.fromARGB(255, 41, 41, 46);
+const Color linearPrimary = Color.fromARGB(218, 63, 158, 225);
+const Color linearGrey = Color.fromARGB(198, 28, 28, 30);
 const Color linearBorder = Color(0xFF2B2B2D);
 
 void main() {
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Zero-Waste Chef',
+      title: 'zeroWaste Chef App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
